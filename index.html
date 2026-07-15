@@ -76,10 +76,6 @@
       box-shadow: var(--box-shadow);
     }
 
-    section:last-of-type {
-      border-bottom: none;
-    }
-
     /* ---------- shared bits ---------- */
     .eyebrow {
       display: inline-block;
@@ -348,7 +344,7 @@
 
     /* ================= ABOUT ================= */
     .sec-about {
-      padding: 2rem 1rem 2rem;
+      padding: 2rem 1rem 0;
       background: var(--white);
       color: var(--line);
     }
@@ -365,25 +361,11 @@
       font-weight: 500;
       letter-spacing: -0.01em;
       line-height: 1.7;
-      margin-bottom: 0;
     }
 
-    .sec-about .sign {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 0.5rem;
-      margin-top: 1.5rem;
-      font-style: italic;
-      font-family: 'Archivo Black', sans-serif;
-    }
-
-    .sec-about .sign::before {
-      content: "";
-      width: 6rem;
-      height: 2px;
-      background: currentColor;
-      opacity: 0.5;
+    .sec-about .illust {
+      width: 10rem;
+      margin-bottom: -1rem;
     }
 
     /* ================= FOOTER ================= */
@@ -560,7 +542,7 @@
         <span>正解を求めるのではなく、<br>自分だけの「好き」を分かち合う。</span>
         <span>その入り口として。</span>
       </p>
-      <p class="sign">miruha</p>
+      <img class="illust" src="assets/about.png" alt="miruha">
     </section>
   </div>
 
