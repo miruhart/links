@@ -58,7 +58,7 @@
 
     .page {
       position: relative;
-      padding: 0 1rem;
+      padding: 0 1.5rem;
       width: 100%;
       max-width: var(--max-width);
       color: var(--line);
@@ -67,12 +67,12 @@
 
     .section {
       position: relative;
-      padding: 2rem 1.5rem 2rem;
+      padding: 1.5rem;
       border: var(--border);
       border-radius: var(--border-radius);
       overflow: hidden;
       text-align: center;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
       box-shadow: var(--box-shadow);
     }
 
@@ -84,11 +84,11 @@
       border-radius: 999px;
       padding: 0.5rem 1rem;
       font-family: 'Archivo Black', sans-serif;
-      font-size: 0.6rem;
+      font-size: 0.7rem;
       font-weight: 400;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.08em;
       box-shadow: var(--box-shadow);
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
 
     h2 {
@@ -96,12 +96,13 @@
       font-weight: 900;
       line-height: 1.35;
       letter-spacing: 0.04em;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     .lead {
       font-size: 0.9rem;
       line-height: 1.5;
+      font-weight: 500;
       margin-bottom: 1.5rem;
       color: var(--sub);
     }
@@ -115,17 +116,38 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 0.6rem;
-      margin: 1.7rem 0 1.5rem;
+      margin: 1rem 0;
     }
 
-    .tag {
+    /* .tag {
       background: var(--white);
       border-radius: 999px;
-      padding: 0.4rem 0.6rem;
+      padding: 0.3rem 0.6rem;
       font-size: 0.8rem;
       font-weight: 600;
       letter-spacing: 0.04em;
-      border: var(--border-s);
+    } */
+
+    .tag {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 0.3rem 0.8rem;
+    }
+
+    .tag::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      background: var(--white);
+      transform: skewX(-15deg);
     }
 
     .btn {
@@ -176,7 +198,6 @@
     .framewrap {
       position: relative;
       width: auto;
-      margin: 0 auto;
       display: flex;
       justify-content: center;
     }
@@ -258,7 +279,11 @@
 
     /* ================= INSTAGRAM ================= */
     .sec-ig {
-      background: var(--blue);
+      background: var(--mustard);
+    }
+
+    .sec-ig .eyebrow {
+      background-color: var(--pink);
     }
 
     .sec-ig .framewrap {
@@ -268,12 +293,12 @@
     .sec-ig .photo {
       width: 100%;
       height: 14rem;
-      border-radius: 10rem 10rem 0 0;
+      border-radius: 20rem 20rem 0 0;
     }
 
     /* ================= DIAGNOSIS ================= */
     .sec-dg {
-      background: var(--pink);
+      background: var(--blue);
       color: var(--line);
       overflow: hidden;
     }
@@ -288,6 +313,10 @@
       margin: 0 -2.4rem;
     }
 
+    .sec-dg .framewrap-wrapper .framewrap {
+      margin: 0 -2.4rem;
+    }
+
     .sec-dg .photo {
       width: 100%;
       max-width: 380px;
@@ -297,14 +326,14 @@
       object-fit: cover;
     }
 
-    .sec-dg .tag {
-      background-color: var(--white);
-    }
-
     /* ================= LINE ================= */
     .sec-line {
       background: var(--green);
       color: var(--line);
+    }
+
+    .sec-line .eyebrow {
+      background-color: var(--blue);
     }
 
     .sec-line h2 {
@@ -314,7 +343,7 @@
     .sec-line .photo {
       width: 100%;
       height: 14rem;
-      border-radius: 10rem 0 10rem 0;
+      border-radius: 8rem 0 8rem 0;
       object-fit: cover;
     }
 
@@ -330,6 +359,10 @@
       text-align: center;
     }
 
+    .sec-contact .eyebrow {
+      background-color: var(--pink);
+    }
+
     .sec-contact .btn {
       background-color: #1a1a1a20;
       border: none;
@@ -340,7 +373,7 @@
       width: 100%;
       height: 14rem;
       margin-bottom: 1.5rem;
-      border-radius: 10rem 10rem 0 0;
+      border-radius: 20rem 20rem 0 0;
     }
 
     /* ================= ABOUT ================= */
@@ -360,8 +393,8 @@
       gap: 0.7rem;
       font-size: 1rem;
       font-weight: 500;
-      letter-spacing: 0.08em;
-      line-height: 1.6;
+      letter-spacing: 0.04em;
+      line-height: 1.5;
     }
 
     .sec-about .illust {
@@ -540,7 +573,7 @@
       <div class="eyebrow pop">ABOUT</div>
       <h2 class="pop" style="animation-delay:60ms;">miruhaについて</h2>
       <p class="lead">
-        <span>アートを作る、売る、買う、<br>読む、見る。</span>
+        <span>アートを見る、読む、<br>作る、売る、買う。</span>
         <span>あらゆる関わりを経てたどり着いた、<br>私の原点。</span>
         <span>それは、すべての根底にある<br>「見る」ということ。</span>
         <span>作品を知り、自分を知り、<br>隣にいる人を知る。</span>
